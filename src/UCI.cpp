@@ -148,6 +148,9 @@ int play_one_game(BoardHistory& bh) {
     Move move = search->think(bh.shallow_clone());
 
     bh.do_move(move);
+
+    string move_string{UCI::move(move)};
+    myprintf_so("info string picked %s\n", move_string.c_str());
   }
 
   // Game termination as draw
