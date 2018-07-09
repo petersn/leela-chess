@@ -17,6 +17,7 @@
 */
 
 #include "utils/transpose.h"
+#include <cstddef>
 
 namespace lczero {
 void TransposeTensor(const std::vector<int>& dims, std::vector<int> order,
